@@ -1,8 +1,9 @@
 ---
-import fondoBuda from '../assets/fondo_buda.webp';
+import { Image } from 'astro:assets';
 import amorImg from '../assets/amor_dark.webp';
 import dineroImg from '../assets/dinero_dark.webp';
 import propositoImg from '../assets/proposito_dark.webp';
+import fondoBuda from '../assets/fondo_buda.webp';
 ---
 
 <html lang="es">
@@ -11,63 +12,65 @@ import propositoImg from '../assets/proposito_dark.webp';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transforma tu Luz</title>
   </head>
-  <body class="relative min-h-screen bg-cover bg-center text-white" style={`background-image: url(${fondoBuda})`}>
-    <main class="flex flex-col items-center justify-center px-4 py-12 text-center">
+  <body class="relative min-h-screen bg-cover bg-center" style={`background-image: url(${fondoBuda.src})`}>
+    <main class="relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center text-white">
       <h1 class="text-4xl font-bold mb-4">Transforma tu Luz</h1>
-      <p class="mb-10 text-lg max-w-2xl">
+      <p class="mb-12 text-lg max-w-2xl">
         Descubre el camino hacia el amor, la abundancia y tu propósito de vida.
       </p>
 
+      <!-- Tarjetas -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Amor -->
-        <div class="bg-black bg-opacity-80 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-64 h-[440px] flex flex-col items-center">
-          <img src={amorImg} alt="Sanar el Amor" class="w-full h-72 object-cover rounded-xl mb-4" />
-          <h2 class="text-lg font-semibold">Sanar el Amor</h2>
+        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[420px] flex flex-col items-center">
+          <Image src={amorImg} alt="Sanar el Amor" class="w-full h-80 object-cover rounded-xl mb-4" />
+          <h2 class="text-lg font-semibold text-white">Sanar el Amor</h2>
         </div>
 
         <!-- Dinero -->
-        <div class="bg-black bg-opacity-80 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-64 h-[440px] flex flex-col items-center">
-          <img src={dineroImg} alt="Atraer Abundancia" class="w-full h-72 object-cover rounded-xl mb-4" />
-          <h2 class="text-lg font-semibold">Atraer Abundancia</h2>
+        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[420px] flex flex-col items-center">
+          <Image src={dineroImg} alt="Atraer Abundancia" class="w-full h-80 object-cover rounded-xl mb-4" />
+          <h2 class="text-lg font-semibold text-white">Atraer Abundancia</h2>
         </div>
 
         <!-- Propósito -->
-        <div class="bg-black bg-opacity-80 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-64 h-[440px] flex flex-col items-center">
-          <img src={propositoImg} alt="Descubrir mi Propósito" class="w-full h-72 object-cover rounded-xl mb-4" />
-          <h2 class="text-lg font-semibold">Descubrir mi Propósito</h2>
+        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[420px] flex flex-col items-center">
+          <Image src={propositoImg} alt="Descubrir mi Propósito" class="w-full h-80 object-cover rounded-xl mb-4" />
+          <h2 class="text-lg font-semibold text-white">Descubrir mi Propósito</h2>
         </div>
       </div>
 
+      <!-- Botón Quiero más información -->
       <a
-        href="https://wa.me/56949787103?text=Hola%2C%20quiero%20más%20información%20sobre%20Transforma%20tu%20Luz"
-        target="_blank"
-        class="mt-10 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full transition"
+        href="https://wa.me/56949787103"
+        class="mt-10 inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition"
       >
-        Quiero más información 💚
+        Quiero más información
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-5 h-5" />
       </a>
     </main>
 
     <!-- Footer -->
-    <footer class="text-center py-6 mt-16 text-gray-300 text-sm flex flex-col items-center">
-      <p>© 2025 Transforma tu Luz. Todos los derechos reservados.</p>
-      <p>Karim y Rafaela.</p>
+    <footer class="text-white text-sm text-center mt-12">
+      <p>© 2025 Transforma tu Luz. Todos los derechos reservados.<br />Karim y Rafaela.</p>
       <a
         href="https://www.facebook.com/profile.php?id=61565948404025"
         target="_blank"
-        class="mt-2 text-blue-400 hover:text-blue-500 transition"
+        class="inline-flex items-center gap-2 mt-2 text-blue-400 hover:underline"
       >
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Facebook-icon-1.png" alt="Facebook" class="w-5 h-5" />
         Ir a nuestra página en Facebook
       </a>
     </footer>
 
-    <!-- Botón WhatsApp -->
+    <!-- Botón WhatsApp Flotante -->
     <a
-      href="https://wa.me/56949787103?text=Hola%2C%20quiero%20más%20información%20sobre%20Transforma%20tu%20Luz"
+      href="https://wa.me/56949787103"
       target="_blank"
-      class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg transition-transform hover:scale-110"
+      class="fixed bottom-4 right-4 z-50 bg-white p-3 rounded-full shadow-lg transition-transform hover:scale-110"
       aria-label="Contáctanos por WhatsApp"
     >
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8" />
     </a>
   </body>
 </html>
