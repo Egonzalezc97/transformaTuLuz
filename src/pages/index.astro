@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets';
-import amorImg from '../assets/amor.webp';
-import dineroImg from '../assets/dinero.webp';
-import propositoImg from '../assets/proposito.webp';
-import fondoBuda from '../assets/fondo_lotus_gradient.webp'; // reemplaza por el nuevo fondo si ya lo tienes
+import fondoBuda from '../assets/fondo_buda_fondooscuro.webp';
+import amorImg from '../assets/amor_dark.webp';
+import dineroImg from '../assets/dinero_dark.webp';
+import propositoImg from '../assets/proposito_dark.webp';
 ---
 
 <html lang="es">
@@ -12,56 +12,70 @@ import fondoBuda from '../assets/fondo_lotus_gradient.webp'; // reemplaza por el
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transforma tu Luz</title>
   </head>
-  <body class="relative min-h-screen bg-cover bg-center text-gray-800" style={`background-image: url(${fondoBuda.src})`}>
-    
-    <!-- Overlay opcional si quieres oscurecer más -->
-    <div class="absolute inset-0 bg-black/30 z-0"></div>
+  <body
+    class="relative min-h-screen bg-cover bg-center text-white"
+    style={`background-image: url(${fondoBuda.src})`}
+  >
+    <!-- Gradiente superpuesto -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80 z-0"></div>
 
+    <!-- Contenido principal -->
     <main class="relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center">
-      <h1 class="text-4xl font-bold mb-4 text-white">Transforma tu Luz</h1>
-      <p class="mb-12 text-lg text-white max-w-2xl">Descubre el camino hacia el amor, la abundancia y tu propósito de vida.</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Transforma tu Luz</h1>
+      <p class="mb-12 text-lg max-w-2xl">Descubre el camino hacia el amor, la abundancia y tu propósito de vida.</p>
 
       <!-- Tarjetas -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full">
-        
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl w-full">
         <!-- Amor -->
-        <a href="/amor" class="group bg-white/90 hover:bg-white rounded-2xl shadow-lg p-4 transition duration-300 transform hover:-translate-y-1">
-          <Image src={amorImg} alt="Sanar el Amor" class="rounded-xl mb-4" />
-          <h2 class="text-xl font-semibold mb-2">Sanar el Amor</h2>
-          <p class="text-sm">Reconecta con tu energía emocional, sana tus heridas y abre tu corazón al amor consciente.</p>
+        <a href="/amor" class="group relative rounded-2xl overflow-hidden transition-transform hover:scale-105 opacity-90 hover:opacity-100">
+          <Image src={amorImg} alt="Sanar el Amor" class="w-full h-64 object-cover rounded-2xl" />
+          <div class="absolute bottom-0 bg-black bg-opacity-60 w-full p-4 text-white text-center">
+            <h2 class="text-xl font-semibold">Sanar el Amor</h2>
+          </div>
         </a>
 
         <!-- Dinero -->
-        <a href="/dinero" class="group bg-white/90 hover:bg-white rounded-2xl shadow-lg p-4 transition duration-300 transform hover:-translate-y-1">
-          <Image src={dineroImg} alt="Atraer Abundancia" class="rounded-xl mb-4" />
-          <h2 class="text-xl font-semibold mb-2">Atraer Abundancia</h2>
-          <p class="text-sm">Activa la energía de la prosperidad en tu vida y desbloquea tus creencias limitantes sobre el dinero.</p>
+        <a href="/dinero" class="group relative rounded-2xl overflow-hidden transition-transform hover:scale-105 opacity-90 hover:opacity-100">
+          <Image src={dineroImg} alt="Atraer Abundancia" class="w-full h-64 object-cover rounded-2xl" />
+          <div class="absolute bottom-0 bg-black bg-opacity-60 w-full p-4 text-white text-center">
+            <h2 class="text-xl font-semibold">Atraer Abundancia</h2>
+          </div>
         </a>
 
         <!-- Propósito -->
-        <a href="/proposito" class="group bg-white/90 hover:bg-white rounded-2xl shadow-lg p-4 transition duration-300 transform hover:-translate-y-1">
-          <Image src={propositoImg} alt="Descubrir mi Propósito" class="rounded-xl mb-4" />
-          <h2 class="text-xl font-semibold mb-2">Descubrir mi Propósito</h2>
-          <p class="text-sm">Encuentra el sentido profundo de tu existencia, tu misión y tu camino personal de transformación.</p>
+        <a href="/proposito" class="group relative rounded-2xl overflow-hidden transition-transform hover:scale-105 opacity-90 hover:opacity-100">
+          <Image src={propositoImg} alt="Descubrir mi Propósito" class="w-full h-64 object-cover rounded-2xl" />
+          <div class="absolute bottom-0 bg-black bg-opacity-60 w-full p-4 text-white text-center">
+            <h2 class="text-xl font-semibold">Descubrir mi Propósito</h2>
+          </div>
         </a>
-
       </div>
+
+      <!-- Botón Quiero más información -->
+      <a
+        href="https://wa.me/56949787103"
+        target="_blank"
+        class="mt-12 inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform hover:scale-105"
+      >
+        Quiero más información 💬
+      </a>
     </main>
 
-    <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/573001234567" target="_blank" aria-label="Chatear por WhatsApp"
-       class="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M20.52 3.48A11.91 11.91 0 0012 0C5.37 0 0 5.37 0 12c0 2.11.55 4.07 1.5 5.8L0 24l6.37-1.5A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12 0-3.18-1.26-6.09-3.48-8.52zM12 22a9.93 9.93 0 01-5.22-1.5l-.37-.22-3.77.89.89-3.77-.22-.37A9.93 9.93 0 012 12C2 6.49 6.49 2 12 2s10 4.49 10 10-4.49 10-10 10z"/>
-        <path d="M17.29 14.71l-2.2-.63a.52.52 0 00-.52.15l-.75.77a7.76 7.76 0 01-3.59-3.59l.77-.75a.52.52 0 00.15-.52l-.63-2.2a.53.53 0 00-.5-.36H8.1a.53.53 0 00-.53.53c0 5.22 4.22 9.47 9.47 9.47a.53.53 0 00.53-.53v-1.7a.53.53 0 00-.36-.5z"/>
-      </svg>
-    </a>
-
     <!-- Footer -->
-    <footer class="bg-white/80 text-center text-gray-700 py-4 mt-12">
+    <footer class="relative z-10 mt-20 text-center text-gray-300 py-6">
       <p>© 2025 Transforma tu Luz. Todos los derechos reservados.</p>
       <p>Karim y Rafaela.</p>
-      <a href="/contacto" class="text-blue-600 hover:underline mt-2 inline-block">Ir a contacto</a>
     </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a
+      href="https://wa.me/56949787103"
+      target="_blank"
+      class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+      aria-label="Contáctanos por WhatsApp"
+    >
+      💬
+    </a>
   </body>
 </html>
+
