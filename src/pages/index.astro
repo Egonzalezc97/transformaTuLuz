@@ -1,9 +1,9 @@
 ---
 import { Image } from 'astro:assets';
+import fondoBuda from '../assets/fondo_buda.webp';
 import amorImg from '../assets/amor_dark.webp';
 import dineroImg from '../assets/dinero_dark.webp';
 import propositoImg from '../assets/proposito_dark.webp';
-import fondoBuda from '../assets/fondo_buda.webp';
 ---
 
 <html lang="es">
@@ -12,65 +12,57 @@ import fondoBuda from '../assets/fondo_buda.webp';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transforma tu Luz</title>
   </head>
-  <body class="relative min-h-screen bg-cover bg-center" style={`background-image: url(${fondoBuda.src})`}>
-    <main class="relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center text-white">
-      <h1 class="text-4xl font-bold mb-4">Transforma tu Luz</h1>
-      <p class="mb-12 text-lg max-w-2xl">
-        Descubre el camino hacia el amor, la abundancia y tu propósito de vida.
-      </p>
+  <body class="relative min-h-screen bg-black bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
+    <main class="relative z-10 flex flex-col items-center justify-center px-4 py-12 text-center">
+      <h1 class="text-4xl font-bold mb-2">Transforma tu Luz</h1>
+      <p class="mb-10 max-w-2xl">Descubre el camino hacia el amor, la abundancia y tu propósito de vida.</p>
 
       <!-- Tarjetas -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Amor -->
-        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[420px] flex flex-col items-center">
+        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[460px] flex flex-col items-center">
           <Image src={amorImg} alt="Sanar el Amor" class="w-full h-80 object-cover rounded-xl mb-4" />
-          <h2 class="text-lg font-semibold text-white">Sanar el Amor</h2>
+          <h2 class="text-lg font-semibold">Sanar el Amor</h2>
+          <p class="text-sm mt-2">Reconecta con tu energía emocional, sana tus heridas y abre tu corazón al amor consciente.</p>
         </div>
 
         <!-- Dinero -->
-        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[420px] flex flex-col items-center">
+        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[460px] flex flex-col items-center">
           <Image src={dineroImg} alt="Atraer Abundancia" class="w-full h-80 object-cover rounded-xl mb-4" />
-          <h2 class="text-lg font-semibold text-white">Atraer Abundancia</h2>
+          <h2 class="text-lg font-semibold">Atraer Abundancia</h2>
+          <p class="text-sm mt-2">Activa la energía de la prosperidad y desbloquea tus creencias limitantes sobre el dinero.</p>
         </div>
 
         <!-- Propósito -->
-        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[420px] flex flex-col items-center">
+        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[460px] flex flex-col items-center">
           <Image src={propositoImg} alt="Descubrir mi Propósito" class="w-full h-80 object-cover rounded-xl mb-4" />
-          <h2 class="text-lg font-semibold text-white">Descubrir mi Propósito</h2>
+          <h2 class="text-lg font-semibold">Descubrir mi Propósito</h2>
+          <p class="text-sm mt-2">Encuentra el sentido profundo de tu existencia y el camino hacia tu transformación personal.</p>
         </div>
       </div>
 
-      <!-- Botón Quiero más información -->
-      <a
-        href="https://wa.me/56949787103"
-        class="mt-10 inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-semibold rounded-full hover:bg-green-700 transition"
-      >
-        Quiero más información
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-5 h-5" />
+      <!-- Botón principal -->
+      <a href="https://wa.me/56949787103" target="_blank" class="mt-10 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105">
+        Quiero más información <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="inline w-5 h-5 ml-2" />
       </a>
     </main>
 
     <!-- Footer -->
-    <footer class="text-white text-sm text-center mt-12">
+    <footer class="text-center text-white text-sm mt-10 mb-4">
       <p>© 2025 Transforma tu Luz. Todos los derechos reservados.<br />Karim y Rafaela.</p>
-      <a
-        href="https://www.facebook.com/profile.php?id=61565948404025"
-        target="_blank"
-        class="inline-flex items-center gap-2 mt-2 text-blue-400 hover:underline"
-      >
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Facebook-icon-1.png" alt="Facebook" class="w-5 h-5" />
-        Ir a nuestra página en Facebook
+      <a href="https://www.facebook.com/profile.php?id=61565948404025" target="_blank" class="inline-block mt-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 inline" /> Ir a nuestra página en Facebook
       </a>
     </footer>
 
-    <!-- Botón WhatsApp Flotante -->
+    <!-- Botón WhatsApp flotante -->
     <a
       href="https://wa.me/56949787103"
       target="_blank"
-      class="fixed bottom-4 right-4 z-50 bg-white p-3 rounded-full shadow-lg transition-transform hover:scale-110"
+      class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
       aria-label="Contáctanos por WhatsApp"
     >
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-8 h-8" />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6" />
     </a>
   </body>
 </html>
