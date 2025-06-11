@@ -14,7 +14,10 @@ import Navbar from '../components/Navbar.astro';
     <title>Transforma tu Luz</title>
   </head>
   <body class="relative min-h-screen bg-black bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
-  <Navbar />
+
+    <!-- Navbar -->
+    <Navbar />
+
     <main class="relative z-10 flex flex-col items-center justify-center px-4 py-12 text-center">
       <h1 class="text-4xl font-bold mb-2">Transforma tu Luz</h1>
       <p class="mb-10 max-w-2xl">Descubre el camino hacia el amor, la abundancia y tu propósito de vida.</p>
@@ -57,35 +60,52 @@ import Navbar from '../components/Navbar.astro';
 
       <!-- Botón principal -->
       <a href="https://wa.me/56949787103" target="_blank" class="mt-10 inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105">
-        Quiero más información <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="inline w-5 h-5 ml-2" />
+        Quiero más información
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="inline w-5 h-5 ml-2" />
       </a>
+
+      <!-- Video desde Facebook -->
+      <div class="mt-10 flex justify-center">
+        <iframe
+          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61565948404025%2Fvideos%2F829112042707301"
+          width="500"
+          height="280"
+          style="border:none;overflow:hidden"
+          scrolling="no"
+          frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        ></iframe>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer class="text-center text-white text-sm mt-10 mb-4">
       <p>© 2025 Transforma tu Luz. Todos los derechos reservados.<br />Karim y Rafaela.</p>
       <a href="https://www.facebook.com/profile.php?id=61565948404025" target="_blank" class="inline-block mt-2">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 inline" /> Ir a nuestra página en Facebook
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 inline" />
+        Ir a nuestra página en Facebook
       </a>
     </footer>
-<!-- Facebook -->
-<a
-  href="https://www.facebook.com/profile.php?id=61565948404025"
-  target="_blank"
-  class="fixed bottom-20 right-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
-  aria-label="Ir a nuestra página en Facebook"
->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 mx-auto" />
-</a>
 
-<!-- WhatsApp -->
-<a
-  href="https://wa.me/56949787103"
-  target="_blank"
-  class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
-  aria-label="Contáctanos por WhatsApp"
->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
-</a>
+    <!-- Facebook flotante -->
+    <a
+      href="https://www.facebook.com/profile.php?id=61565948404025"
+      target="_blank"
+      class="fixed bottom-20 right-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+      aria-label="Ir a nuestra página en Facebook"
+    >
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 mx-auto" />
+    </a>
+
+    <!-- WhatsApp flotante -->
+    <a
+      href="https://wa.me/56949787103"
+      target="_blank"
+      class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+      aria-label="Contáctanos por WhatsApp"
+    >
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
+    </a>
   </body>
 </html>
