@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import fondoAmor from '../assets/fondo-amor.webp';
+import fondoBuda from '../assets/fondo_buda.webp';
 import Navbar from '../components/Navbar.astro';
 ---
 
@@ -10,7 +10,7 @@ import Navbar from '../components/Navbar.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanar el Amor | Transforma tu Luz</title>
   </head>
-  <body class="relative min-h-screen bg-cover bg-center text-white" style={`background-image: url(${fondoAmor.src})`}>
+  <body class="relative min-h-screen bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
     
     <!-- Navbar -->
     <Navbar />
@@ -57,15 +57,6 @@ import Navbar from '../components/Navbar.astro';
       <section class="mt-16 text-pink-100 text-xl italic">
         "El amor verdadero empieza cuando sanamos el alma que lo busca."
       </section>
-
-      <!-- Botón volver al inicio -->
-      <a
-        href="/"
-        class="mt-10 inline-block bg-white/80 text-gray-800 px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105 hover:bg-white/90 font-semibold"
-      >
-        ⬅ Volver al inicio
-      </a>
-
     </main>
 
     <!-- Footer -->
