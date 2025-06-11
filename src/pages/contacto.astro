@@ -1,1 +1,97 @@
-<h1 class='text-2xl text-center p-10'>Contáctanos 🌐 | Aquí van tus redes sociales</h1>
+---
+import fondoBuda from '../assets/fondo_buda.webp';
+import Navbar from '../components/Navbar.astro';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto | Transforma tu Luz</title>
+  </head>
+  <body class="relative min-h-screen bg-black bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
+
+    <!-- Navbar -->
+    <Navbar />
+
+    <main class="relative z-10 flex flex-col items-center justify-center px-4 py-16 text-center">
+      <h1 class="text-3xl font-bold text-white mb-4">Conecta con nosotros</h1>
+      <p class="mb-10 max-w-xl text-gray-200">
+        Comparte tu situación, inquietud o experiencia. Estamos aquí para acompañarte con claridad, escucha y guía desde el corazón.
+      </p>
+
+      <!-- Formulario de contacto -->
+      <form
+        action="https://formsubmit.co/transformatuluz@gmail.com"
+        method="POST"
+        class="bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-lg w-full max-w-xl text-left space-y-4"
+      >
+        <!-- Configuración del envío -->
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde TransformaTuLuz" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+
+        <!-- Campos del formulario -->
+        <div>
+          <label for="nombre" class="block mb-1 text-sm text-white">Nombre completo</label>
+          <input type="text" name="nombre" id="nombre" required class="w-full p-3 rounded bg-white text-black" />
+        </div>
+
+        <div>
+          <label for="telefono" class="block mb-1 text-sm text-white">Teléfono</label>
+          <input type="tel" name="telefono" id="telefono" class="w-full p-3 rounded bg-white text-black" />
+        </div>
+
+        <div>
+          <label for="email" class="block mb-1 text-sm text-white">Correo electrónico</label>
+          <input type="email" name="email" id="email" required class="w-full p-3 rounded bg-white text-black" />
+        </div>
+
+        <div>
+          <label for="mensaje" class="block mb-1 text-sm text-white">¿Cómo podemos ayudarte?</label>
+          <textarea name="mensaje" id="mensaje" rows="5" required class="w-full p-3 rounded bg-white text-black"></textarea>
+        </div>
+
+        <button type="submit" class="w-full mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full shadow-md transition-transform hover:scale-105">
+          Enviar mensaje
+        </button>
+      </form>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-white text-sm mt-20 mb-4">
+      <p>© 2025 Transforma tu Luz. Todos los derechos reservados.<br />Karim y Rafaela.</p>
+      <a
+        href="https://www.facebook.com/profile.php?id=61565948404025"
+        target="_blank"
+        class="inline-block mt-2"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
+          alt="Facebook"
+          class="w-6 h-6 inline"
+        />
+        Ir a nuestra página en Facebook
+      </a>
+    </footer>
+
+    <!-- Botones flotantes -->
+    <a
+      href="https://www.facebook.com/profile.php?id=61565948404025"
+      target="_blank"
+      class="fixed bottom-20 right-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+      aria-label="Ir a nuestra página en Facebook"
+    >
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 mx-auto" />
+    </a>
+
+    <a
+      href="https://wa.me/573001112233"
+      target="_blank"
+      class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+      aria-label="Contáctanos por WhatsApp"
+    >
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
+    </a>
+  </body>
+</html>
