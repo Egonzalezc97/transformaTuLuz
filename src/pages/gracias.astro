@@ -11,21 +11,42 @@ import Navbar from '../components/Navbar.astro';
   </head>
   <body class="relative min-h-screen bg-black bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
 
+    <!-- Navbar -->
     <Navbar />
 
     <main class="relative z-10 flex flex-col items-center justify-center px-4 py-20 text-center">
       <h1 class="text-3xl font-bold text-white mb-6">¡Gracias por tu mensaje!</h1>
       <p class="max-w-xl text-gray-300 text-lg mb-8">
         Hemos recibido tu mensaje y muy pronto Karim o Rafaela te contactarán personalmente.
-        Tu luz merece ser escuchada 🌟
+        Tu luz merece ser escuchada y guiada.
       </p>
 
-      <a href="/" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105">
+      <a
+        href="/"
+        class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105"
+      >
         Volver al inicio
       </a>
     </main>
 
-    <!-- Botones flotantes -->
+    <!-- Footer -->
+    <footer class="text-center text-white text-sm mt-20 mb-4">
+      <p>© 2025 Transforma tu Luz. Todos los derechos reservados.<br />Karim y Rafaela.</p>
+      <a
+        href="https://www.facebook.com/profile.php?id=61565948404025"
+        target="_blank"
+        class="inline-block mt-2"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
+          alt="Facebook"
+          class="w-6 h-6 inline"
+        />
+        Ir a nuestra página en Facebook
+      </a>
+    </footer>
+
+    <!-- Botón Facebook -->
     <a
       href="https://www.facebook.com/profile.php?id=61565948404025"
       target="_blank"
@@ -35,8 +56,9 @@ import Navbar from '../components/Navbar.astro';
       <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 mx-auto" />
     </a>
 
+    <!-- Botón WhatsApp -->
     <a
-      href="https://wa.me/573001112233"
+      href="https://wa.me/56949787103"
       target="_blank"
       class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
       aria-label="Contáctanos por WhatsApp"
