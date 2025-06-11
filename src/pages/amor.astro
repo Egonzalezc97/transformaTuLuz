@@ -10,7 +10,7 @@ import Navbar from '../components/Navbar.astro';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanar el Amor | Transforma tu Luz</title>
   </head>
-  <body class="relative min-h-screen bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
+  <body class="relative min-h-screen bg-black bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
     
     <!-- Navbar -->
     <Navbar />
@@ -18,8 +18,8 @@ import Navbar from '../components/Navbar.astro';
     <main class="relative z-10 flex flex-col items-center justify-center px-4 py-16 text-center">
 
       <!-- Cuadro principal -->
-      <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg max-w-3xl w-full p-8 space-y-6 text-gray-800">
-        <h1 class="text-3xl font-bold text-pink-700">Sana tus heridas del corazón</h1>
+      <div class="bg-gray-100/80 backdrop-blur-md rounded-2xl shadow-lg max-w-3xl w-full p-8 space-y-6 text-gray-800">
+        <h1 class="text-3xl font-bold text-pink-400">Sana tus heridas del corazón</h1>
         <p class="text-base leading-relaxed">
           El amor no debe doler. Aquí te acompañamos a comprender, cerrar ciclos,
           y volver a amar desde la conciencia. Aprende a soltar, perdonar y atraer
@@ -38,24 +38,26 @@ import Navbar from '../components/Navbar.astro';
       <section class="mt-20 max-w-5xl w-full px-4">
         <h2 class="text-2xl font-semibold text-pink-200 mb-6">Historias que inspiran</h2>
         <div class="grid gap-6 md:grid-cols-3">
-          <div class="bg-white/80 backdrop-blur-md p-4 rounded-xl shadow text-gray-800">
+          <div class="bg-gray-100/80 backdrop-blur-md p-4 rounded-xl shadow text-gray-800">
             <p class="italic">"Gracias a la guía de Karim y Rafaela, aprendí a amarme a mí misma primero. Sanar con ellos fue el inicio de mi transformación."</p>
-            <span class="block mt-3 font-bold text-pink-600">– Mariana</span>
+            <span class="block mt-3 font-bold text-pink-400">– Mariana</span>
           </div>
-          <div class="bg-white/80 backdrop-blur-md p-4 rounded-xl shadow text-gray-800">
+          <div class="bg-gray-100/80 backdrop-blur-md p-4 rounded-xl shadow text-gray-800">
             <p class="italic">"Con el acompañamiento de Karim y Rafaela logré cerrar un ciclo muy doloroso. Hoy puedo mirar al amor con paz y gratitud."</p>
-            <span class="block mt-3 font-bold text-pink-600">– Camilo</span>
+            <span class="block mt-3 font-bold text-pink-400">– Camilo</span>
           </div>
-          <div class="bg-white/80 backdrop-blur-md p-4 rounded-xl shadow text-gray-800">
+          <div class="bg-gray-100/80 backdrop-blur-md p-4 rounded-xl shadow text-gray-800">
             <p class="italic">"No creía en estas cosas… pero Karim y Rafaela me hicieron sentir escuchada, comprendida. Me siento libre emocionalmente."</p>
-            <span class="block mt-3 font-bold text-pink-600">– Laura</span>
+            <span class="block mt-3 font-bold text-pink-400">– Laura</span>
           </div>
         </div>
       </section>
 
-      <!-- Frase espiritual -->
-      <section class="mt-16 text-pink-100 text-xl italic">
-        "El amor verdadero empieza cuando sanamos el alma que lo busca."
+      <!-- Frase espiritual destacada -->
+      <section class="mt-16 flex justify-center">
+        <div class="bg-black/60 backdrop-blur-md px-6 py-4 rounded-xl text-center max-w-xl text-pink-100 text-lg italic shadow">
+          "El amor verdadero empieza cuando sanamos el alma que lo busca."
+        </div>
       </section>
     </main>
 
@@ -76,32 +78,23 @@ import Navbar from '../components/Navbar.astro';
       </a>
     </footer>
 
-    <!-- Facebook flotante -->
+    <!-- Botones flotantes -->
     <a
       href="https://www.facebook.com/profile.php?id=61565948404025"
       target="_blank"
       class="fixed bottom-20 right-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
       aria-label="Ir a nuestra página en Facebook"
     >
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
-        alt="Facebook"
-        class="w-6 h-6 mx-auto"
-      />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 mx-auto" />
     </a>
 
-    <!-- WhatsApp flotante -->
     <a
       href="https://wa.me/573001112233"
       target="_blank"
       class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
       aria-label="Contáctanos por WhatsApp"
     >
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-        alt="WhatsApp"
-        class="w-6 h-6 mx-auto"
-      />
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
     </a>
   </body>
 </html>
