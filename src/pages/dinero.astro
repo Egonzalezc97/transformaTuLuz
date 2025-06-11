@@ -1,1 +1,111 @@
-<h1 class='text-2xl text-center p-10'>Sección Dinero 💰</h1>
+---
+import { Image } from 'astro:assets';
+import fondoBuda from '../assets/fondo_buda.webp';
+import Navbar from '../components/Navbar.astro';
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atraer Abundancia | Transforma tu Luz</title>
+  </head>
+  <body class="relative min-h-screen bg-black bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
+    
+    <!-- Navbar -->
+    <Navbar />
+
+    <main class="relative z-10 flex flex-col items-center justify-center px-4 py-16 text-center">
+
+      <!-- Cuadro principal -->
+      <div class="bg-gray-100/80 backdrop-blur-md rounded-2xl shadow-lg max-w-3xl w-full p-8 space-y-6 text-gray-800">
+        <h1 class="text-3xl font-bold text-green-400">Activa tu energía de prosperidad</h1>
+        <p class="text-base leading-relaxed">
+          La abundancia no se persigue, se manifiesta desde tu vibración interior. Karim y Rafaela te enseñarán a desbloquear tus creencias limitantes, reprogramar tu mente y abrirte a recibir lo que mereces.
+        </p>
+        <a
+          href="https://wa.me/573001112233"
+          target="_blank"
+          class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105"
+        >
+          Manifiesta tu abundancia (WhatsApp)
+        </a>
+      </div>
+
+      <!-- Testimonios únicos -->
+      <section class="mt-20 max-w-4xl w-full px-4">
+        <h2 class="text-2xl font-semibold text-green-300 mb-6 text-center">Testimonios de manifestación</h2>
+
+        <div class="space-y-6">
+          <!-- Testimonio 1 -->
+          <div class="flex items-start gap-4 bg-gray-100/80 p-4 rounded-xl shadow">
+            <div class="text-green-500 text-2xl">•</div>
+            <div class="text-left text-gray-800">
+              <p class="italic">"Yo creía que el dinero solo llegaba con sacrificio… Hasta que trabajé con Karim y Rafaela. Hoy tengo más ingresos y más paz."</p>
+              <span class="block mt-2 font-bold text-green-700">– Natalia</span>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div class="flex items-start gap-4 bg-gray-100/80 p-4 rounded-xl shadow">
+            <div class="text-green-500 text-2xl">•</div>
+            <div class="text-left text-gray-800">
+              <p class="italic">"Reprogramé mi mente con sus enseñanzas y comencé a atraer mejores clientes, más ventas y hasta premios que nunca imaginé."</p>
+              <span class="block mt-2 font-bold text-green-700">– Juan</span>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="flex items-start gap-4 bg-gray-100/80 p-4 rounded-xl shadow">
+            <div class="text-green-500 text-2xl">•</div>
+            <div class="text-left text-gray-800">
+              <p class="italic">"Aprendí que merezco recibir. Desde entonces todo fluye distinto: dinero, ideas, proyectos... Karim y Rafaela son guías de verdad."</p>
+              <span class="block mt-2 font-bold text-green-700">– Sofía</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frase de cierre -->
+      <section class="mt-16 text-green-100 text-lg italic text-center">
+        "Cuando crees que mereces, el universo no duda en entregarte."
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-white text-sm mt-20 mb-4">
+      <p>© 2025 Transforma tu Luz. Todos los derechos reservados.<br />Karim y Rafaela.</p>
+      <a
+        href="https://www.facebook.com/profile.php?id=61565948404025"
+        target="_blank"
+        class="inline-block mt-2"
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
+          alt="Facebook"
+          class="w-6 h-6 inline"
+        />
+        Ir a nuestra página en Facebook
+      </a>
+    </footer>
+
+    <!-- Botones flotantes -->
+    <a
+      href="https://www.facebook.com/profile.php?id=61565948404025"
+      target="_blank"
+      class="fixed bottom-20 right-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+      aria-label="Ir a nuestra página en Facebook"
+    >
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 mx-auto" />
+    </a>
+
+    <a
+      href="https://wa.me/573001112233"
+      target="_blank"
+      class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
+      aria-label="Contáctanos por WhatsApp"
+    >
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
+    </a>
+  </body>
+</html>
