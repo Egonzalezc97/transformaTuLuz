@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import fondoAmor from '../assets/fondo-amor.webp';
+import Navbar from '../components/Navbar.astro';
 ---
 
 <html lang="es">
@@ -9,11 +10,13 @@ import fondoAmor from '../assets/fondo-amor.webp';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanar el Amor | Transforma tu Luz</title>
   </head>
-  <body
-    class="relative min-h-screen bg-cover bg-center text-white"
-    style={`background-image: url(${fondoAmor.src})`}
-  >
+  <body class="relative min-h-screen bg-cover bg-center text-white" style={`background-image: url(${fondoAmor.src})`}>
+    
+    <!-- Navbar -->
+    <Navbar />
+
     <main class="relative z-10 flex flex-col items-center justify-center px-4 py-16 text-center">
+
       <!-- Cuadro principal -->
       <div class="bg-white/80 backdrop-blur-md rounded-2xl shadow-lg max-w-3xl w-full p-8 space-y-6 text-gray-800">
         <h1 class="text-3xl font-bold text-pink-700">Sana tus heridas del corazón</h1>
@@ -54,6 +57,15 @@ import fondoAmor from '../assets/fondo-amor.webp';
       <section class="mt-16 text-pink-100 text-xl italic">
         "El amor verdadero empieza cuando sanamos el alma que lo busca."
       </section>
+
+      <!-- Botón volver al inicio -->
+      <a
+        href="/"
+        class="mt-10 inline-block bg-white/80 text-gray-800 px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105 hover:bg-white/90 font-semibold"
+      >
+        ⬅ Volver al inicio
+      </a>
+
     </main>
 
     <!-- Footer -->
@@ -73,7 +85,7 @@ import fondoAmor from '../assets/fondo-amor.webp';
       </a>
     </footer>
 
-    <!-- Botón Facebook flotante -->
+    <!-- Facebook flotante -->
     <a
       href="https://www.facebook.com/profile.php?id=61565948404025"
       target="_blank"
@@ -87,7 +99,7 @@ import fondoAmor from '../assets/fondo-amor.webp';
       />
     </a>
 
-    <!-- Botón WhatsApp flotante -->
+    <!-- WhatsApp flotante -->
     <a
       href="https://wa.me/573001112233"
       target="_blank"
