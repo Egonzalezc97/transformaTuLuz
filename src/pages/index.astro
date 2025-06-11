@@ -20,25 +20,37 @@ import propositoImg from '../assets/proposito_dark.webp';
       <!-- Tarjetas -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <!-- Amor -->
-        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[460px] flex flex-col items-center">
-          <Image src={amorImg} alt="Sanar el Amor" class="w-full h-80 object-cover rounded-xl mb-4" />
-          <h2 class="text-lg font-semibold">Sanar el Amor</h2>
-          <p class="text-sm mt-2">Reconecta con tu energía emocional, sana tus heridas y abre tu corazón al amor consciente.</p>
-        </div>
+        <a href="/amor" class="no-underline">
+          <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[460px] flex flex-col items-center">
+            <Image src={amorImg} alt="Sanar el Amor" class="w-full h-80 object-cover rounded-xl mb-4" />
+            <h2 class="text-lg font-semibold text-white">Sanar el Amor</h2>
+            <p class="text-sm mt-2 text-gray-300">
+              Reconecta con tu energía emocional, sana tus heridas y abre tu corazón al amor consciente.
+            </p>
+          </div>
+        </a>
 
         <!-- Dinero -->
-        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[460px] flex flex-col items-center">
-          <Image src={dineroImg} alt="Atraer Abundancia" class="w-full h-80 object-cover rounded-xl mb-4" />
-          <h2 class="text-lg font-semibold">Atraer Abundancia</h2>
-          <p class="text-sm mt-2">Activa la energía de la prosperidad y desbloquea tus creencias limitantes sobre el dinero.</p>
-        </div>
+        <a href="/dinero" class="no-underline">
+          <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[460px] flex flex-col items-center">
+            <Image src={dineroImg} alt="Atraer Abundancia" class="w-full h-80 object-cover rounded-xl mb-4" />
+            <h2 class="text-lg font-semibold text-white">Atraer Abundancia</h2>
+            <p class="text-sm mt-2 text-gray-300">
+              Activa la energía de la prosperidad y desbloquea tus creencias limitantes sobre el dinero.
+            </p>
+          </div>
+        </a>
 
         <!-- Propósito -->
-        <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[460px] flex flex-col items-center">
-          <Image src={propositoImg} alt="Descubrir mi Propósito" class="w-full h-80 object-cover rounded-xl mb-4" />
-          <h2 class="text-lg font-semibold">Descubrir mi Propósito</h2>
-          <p class="text-sm mt-2">Encuentra el sentido profundo de tu existencia y el camino hacia tu transformación personal.</p>
-        </div>
+        <a href="/proposito" class="no-underline">
+          <div class="bg-black bg-opacity-70 backdrop-blur-sm rounded-2xl p-4 shadow-lg transition-transform hover:scale-105 w-72 h-[460px] flex flex-col items-center">
+            <Image src={propositoImg} alt="Descubrir mi Propósito" class="w-full h-80 object-cover rounded-xl mb-4" />
+            <h2 class="text-lg font-semibold text-white">Descubrir mi Propósito</h2>
+            <p class="text-sm mt-2 text-gray-300">
+              Encuentra el sentido profundo de tu existencia y el camino hacia tu transformación personal.
+            </p>
+          </div>
+        </a>
       </div>
 
       <!-- Botón principal -->

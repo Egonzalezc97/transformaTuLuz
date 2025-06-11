@@ -14,3 +14,7 @@ body {
   background-color: var(--color-primary);
   color: var(--color-dark);
 }
+a.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
