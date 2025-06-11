@@ -64,18 +64,26 @@ import Navbar from '../components/Navbar.astro';
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="inline w-5 h-5 ml-2" />
       </a>
 
-      <!-- Video desde Facebook -->
-      <div class="mt-10 flex justify-center">
-        <iframe
-          src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61565948404025%2Fvideos%2F829112042707301"
-          width="500"
-          height="280"
-          style="border:none;overflow:hidden"
-          scrolling="no"
-          frameborder="0"
-          allowfullscreen="true"
-          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        ></iframe>
+      <!-- Frase inspiradora -->
+      <section class="mt-16 text-white text-lg italic text-center max-w-2xl mx-auto">
+        “A veces, lo que más necesitas no es una respuesta... sino recordar quién eres.”
+      </section>
+
+      <!-- Video desde Facebook - tamaño completo -->
+      <div class="mt-12 w-full flex justify-center">
+        <div class="aspect-video w-full max-w-4xl">
+          <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F61565948404025%2Fvideos%2F829112042707301"
+            width="100%"
+            height="100%"
+            style="border:none;overflow:hidden"
+            scrolling="no"
+            frameborder="0"
+            allowfullscreen="true"
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            class="w-full h-full rounded-xl shadow-lg"
+          ></iframe>
+        </div>
       </div>
     </main>
 
