@@ -8,7 +8,17 @@ import Navbar from '../components/Navbar.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contacto | Transforma tu Luz</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17216123599" is:inline></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'AW-17216123599');
+    </script>
   </head>
+
   <body class="relative min-h-screen bg-black bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
 
     <!-- Navbar -->
@@ -22,6 +32,7 @@ import Navbar from '../components/Navbar.astro';
 
       <!-- Formulario de contacto -->
       <form
+        id="contactForm"
         action="https://formsubmit.co/transformatuluz@gmail.com"
         method="POST"
         class="bg-black/60 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-lg w-full max-w-xl text-left space-y-4"
@@ -53,7 +64,10 @@ import Navbar from '../components/Navbar.astro';
           <textarea name="mensaje" id="mensaje" rows="5" required class="w-full p-3 rounded bg-white text-black"></textarea>
         </div>
 
-        <button type="submit" class="w-full mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full shadow-md transition-transform hover:scale-105">
+        <button
+          type="submit"
+          class="w-full mt-4 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full shadow-md transition-transform hover:scale-105"
+        >
           Enviar mensaje
         </button>
       </form>
@@ -94,5 +108,17 @@ import Navbar from '../components/Navbar.astro';
     >
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
     </a>
+
+    <!-- Script de conversión al enviar -->
+    <script is:inline>
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17216123599'
+        });
+        setTimeout(() => form.submit(), 300);
+      });
+    </script>
   </body>
 </html>
