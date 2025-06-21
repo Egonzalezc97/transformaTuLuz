@@ -33,7 +33,8 @@ import Navbar from '../components/Navbar.astro';
           No estás aquí por casualidad. Dentro de ti habita una misión única, un fuego sagrado que guía tus pasos. Karim y Rafaela te acompañarán a reconectar con tu esencia, romper la confusión y alinear tu vida con propósito.
         </p>
         <a
-          href="https://wa.me/573001112233"
+          id="whatsappButtonProposito"
+          href="https://wa.me/56949787103"
           target="_blank"
           class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105"
         >
@@ -42,24 +43,21 @@ import Navbar from '../components/Navbar.astro';
         </a>
       </div>
 
-      <!-- Testimonios de propósito -->
+      <!-- Testimonios -->
       <section class="mt-20 max-w-6xl w-full px-4">
         <h2 class="text-2xl font-semibold text-indigo-300 mb-10 text-center">Personas que despertaron su camino</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Testimonio 1 -->
           <div class="relative bg-black/60 backdrop-blur-md border border-indigo-400 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
             <p class="text-base text-white italic">"Vivía sin rumbo, con ansiedad... pero después de las sesiones entendí por qué estoy aquí. Ahora cada día tiene sentido."</p>
             <span class="block mt-4 text-sm text-indigo-200 font-bold text-right">– Carolina</span>
           </div>
 
-          <!-- Testimonio 2 -->
           <div class="relative bg-black/60 backdrop-blur-md border border-indigo-400 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
             <p class="text-base text-white italic">"Descubrí que mi trabajo no era mi destino. Karim y Rafaela me ayudaron a ver mi verdadera misión. Hoy guío a otros."</p>
             <span class="block mt-4 text-sm text-indigo-200 font-bold text-right">– Esteban</span>
           </div>
 
-          <!-- Testimonio 3 -->
           <div class="relative bg-black/60 backdrop-blur-md border border-indigo-400 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
             <p class="text-base text-white italic">"Siento que algo despertó en mí. Volví a conectar con lo que amaba de niña. Estoy construyendo un camino auténtico."</p>
             <span class="block mt-4 text-sm text-indigo-200 font-bold text-right">– Andrea</span>
@@ -81,11 +79,7 @@ import Navbar from '../components/Navbar.astro';
         target="_blank"
         class="inline-block mt-2"
       >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
-          alt="Facebook"
-          class="w-6 h-6 inline"
-        />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 inline" />
         Ir a nuestra página en Facebook
       </a>
     </footer>
@@ -108,5 +102,15 @@ import Navbar from '../components/Navbar.astro';
     >
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
     </a>
+
+    <!-- Evento de conversión para botón principal -->
+    <script is:inline>
+      const btn = document.getElementById('whatsappButtonProposito');
+      btn?.addEventListener('click', function () {
+        gtag('event', 'conversion', {
+          send_to: 'AW-17216123599'
+        });
+      });
+    </script>
   </body>
 </html>

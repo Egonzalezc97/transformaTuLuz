@@ -1,6 +1,6 @@
 ---
-import { Image } from 'astro:assets';
 import fondoBuda from '../assets/fondo_buda.webp';
+import amorImg from '../assets/amor_dark.webp';
 import Navbar from '../components/Navbar.astro';
 ---
 
@@ -9,97 +9,47 @@ import Navbar from '../components/Navbar.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanar el Amor | Transforma tu Luz</title>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17216123599" is:inline></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17216123599"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){ dataLayer.push(arguments); }
+      function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', 'AW-17216123599');
+
+      function trackWhatsAppConversion() {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17216123599/MseyCIfJo98aEM_lpJFA'
+        });
+      }
     </script>
   </head>
-
   <body class="relative min-h-screen bg-black bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
-
-    <!-- Navbar -->
     <Navbar />
 
     <main class="relative z-10 flex flex-col items-center justify-center px-4 py-16 text-center">
-      <!-- Cuadro principal -->
-      <div class="bg-gray-100/80 backdrop-blur-md rounded-2xl shadow-lg max-w-3xl w-full p-8 space-y-6 text-gray-800">
-        <h1 class="text-3xl font-bold text-pink-400">Sana tus heridas del corazón</h1>
-        <p class="text-base leading-relaxed">
-          El amor no debe doler. Aquí te acompañamos a comprender, cerrar ciclos,
-          y volver a amar desde la conciencia. Aprende a soltar, perdonar y atraer
-          relaciones sanas, desde el respeto propio y la energía del corazón.
-        </p>
-        <a
-          href="https://wa.me/573001112233"
-          target="_blank"
-          class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105"
-        >
-          Habla con nosotros por WhatsApp
-        </a>
-      </div>
+      <h1 class="text-4xl font-bold mb-4">Sanar el Amor</h1>
+      <p class="max-w-2xl mb-8 text-gray-300">
+        Aprende a sanar tus heridas emocionales, a reconectar contigo mismo y abrir tu corazón al amor verdadero.
+      </p>
 
-      <!-- Testimonios -->
-      <section class="mt-20 max-w-5xl w-full px-4">
-        <h2 class="text-2xl font-semibold text-pink-200 mb-6">Historias que inspiran</h2>
-        <div class="grid gap-6 md:grid-cols-3">
-          <div class="bg-gray-100/80 backdrop-blur-md p-4 rounded-xl shadow text-gray-800">
-            <p class="italic">"Gracias a la guía de Karim y Rafaela, aprendí a amarme a mí misma primero. Sanar con ellos fue el inicio de mi transformación."</p>
-            <span class="block mt-3 font-bold text-pink-400">– Alejandra</span>
-          </div>
-          <div class="bg-gray-100/80 backdrop-blur-md p-4 rounded-xl shadow text-gray-800">
-            <p class="italic">"Con el acompañamiento de Karim y Rafaela logré cerrar un ciclo muy doloroso. Hoy puedo mirar al amor con paz y gratitud."</p>
-            <span class="block mt-3 font-bold text-pink-400">– Diego</span>
-          </div>
-          <div class="bg-gray-100/80 backdrop-blur-md p-4 rounded-xl shadow text-gray-800">
-            <p class="italic">"No creía en estas cosas… pero Karim y Rafaela me hicieron sentir escuchada, comprendida. Me siento libre emocionalmente."</p>
-            <span class="block mt-3 font-bold text-pink-400">– Laura</span>
-          </div>
-        </div>
-      </section>
+      <img src={amorImg.src} alt="Sanar el amor" class="w-full max-w-md rounded-xl shadow-lg mb-8" />
 
-      <!-- Frase espiritual destacada -->
-      <section class="mt-16 flex justify-center">
-        <div class="bg-black/60 backdrop-blur-md px-6 py-4 rounded-xl text-center max-w-xl text-pink-100 text-lg italic shadow">
-          "El amor verdadero empieza cuando sanamos el alma que lo busca."
-        </div>
-      </section>
+      <a
+        href="https://wa.me/56949787103"
+        target="_blank"
+        onclick="trackWhatsAppConversion()"
+        class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105"
+      >
+        Quiero sanar el amor
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="inline w-5 h-5 ml-2" />
+      </a>
     </main>
 
-    <!-- Footer -->
-    <footer class="text-center text-white text-sm mt-20 mb-4">
-      <p>© 2025 Transforma tu Luz. Todos los derechos reservados.<br />Karim y Rafaela.</p>
-      <a
-        href="https://www.facebook.com/profile.php?id=61565948404025"
-        target="_blank"
-        class="inline-block mt-2"
-      >
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg"
-          alt="Facebook"
-          class="w-6 h-6 inline"
-        />
-        Ir a nuestra página en Facebook
-      </a>
-    </footer>
-
-    <!-- Botones flotantes -->
-    <a
-      href="https://www.facebook.com/profile.php?id=61565948404025"
-      target="_blank"
-      class="fixed bottom-20 right-4 z-50 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
-      aria-label="Ir a nuestra página en Facebook"
-    >
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" class="w-6 h-6 mx-auto" />
-    </a>
-
+    <!-- WhatsApp flotante -->
     <a
       href="https://wa.me/56949787103"
       target="_blank"
+      onclick="trackWhatsAppConversion()"
       class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
       aria-label="Contáctanos por WhatsApp"
     >
