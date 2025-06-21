@@ -103,12 +103,23 @@ import Navbar from '../components/Navbar.astro';
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
     </a>
 
-    <!-- Evento de conversión para botón principal -->
+    <!-- Evento de conversión para botones WhatsApp -->
     <script is:inline>
+      // Botón principal
       const btn = document.getElementById('whatsappButtonProposito');
       btn?.addEventListener('click', function () {
         gtag('event', 'conversion', {
-          send_to: 'AW-17216123599'
+          send_to: 'AW-17216123599/fXRBCJW0798aEM_lpJFA'
+        });
+      });
+
+      // Botón flotante
+      const floatingBtn = document.querySelector(
+        'a[href="https://wa.me/56949787103"]:not(#whatsappButtonProposito)'
+      );
+      floatingBtn?.addEventListener('click', function () {
+        gtag('event', 'conversion', {
+          send_to: 'AW-17216123599/fXRBCJW0798aEM_lpJFA'
         });
       });
     </script>

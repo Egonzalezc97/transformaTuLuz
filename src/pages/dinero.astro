@@ -35,7 +35,7 @@ import Navbar from '../components/Navbar.astro';
         </p>
         <a
           id="whatsappConversionBtn"
-          href="https://wa.me/573001112233"
+          href="https://wa.me/56949787103"
           target="_blank"
           class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105"
         >
@@ -108,12 +108,23 @@ import Navbar from '../components/Navbar.astro';
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
     </a>
 
-    <!-- Evento de conversión -->
+    <!-- Evento de conversión para botones WhatsApp -->
     <script is:inline>
+      // Botón principal
       const whatsappBtn = document.getElementById('whatsappConversionBtn');
       whatsappBtn?.addEventListener('click', function() {
         gtag('event', 'conversion', {
-          'send_to': 'AW-17216123599/MseyCIfJo98aEM_lpJFA'
+          send_to: 'AW-17216123599/MseyCIfJo98aEM_lpJFA'
+        });
+      });
+
+      // Botón flotante
+      const floatingBtn = document.querySelector(
+        'a[href="https://wa.me/56949787103"]:not(#whatsappConversionBtn)'
+      );
+      floatingBtn?.addEventListener('click', function () {
+        gtag('event', 'conversion', {
+          send_to: 'AW-17216123599/MseyCIfJo98aEM_lpJFA'
         });
       });
     </script>

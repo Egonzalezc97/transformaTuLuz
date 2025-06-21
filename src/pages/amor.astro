@@ -9,25 +9,22 @@ import Navbar from '../components/Navbar.astro';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sanar el Amor | Transforma tu Luz</title>
+
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17216123599"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
       gtag('js', new Date());
       gtag('config', 'AW-17216123599');
-
-      function trackWhatsAppConversion() {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-17216123599/MseyCIfJo98aEM_lpJFA'
-        });
-      }
     </script>
   </head>
+
   <body class="relative min-h-screen bg-black bg-cover bg-center text-white" style={`background-image: url(${fondoBuda.src})`}>
     <Navbar />
 
     <main class="relative z-10 flex flex-col items-center justify-center px-4 py-16 text-center">
-      <h1 class="text-4xl font-bold mb-4">Sanar el Amor</h1>
+      <h1 class="text-4xl font-bold mb-4 text-pink-400">Sanar el Amor</h1>
       <p class="max-w-2xl mb-8 text-gray-300">
         Aprende a sanar tus heridas emocionales, a reconectar contigo mismo y abrir tu corazón al amor verdadero.
       </p>
@@ -35,25 +32,67 @@ import Navbar from '../components/Navbar.astro';
       <img src={amorImg.src} alt="Sanar el amor" class="w-full max-w-md rounded-xl shadow-lg mb-8" />
 
       <a
+        id="whatsappBtnAmor"
         href="https://wa.me/56949787103"
         target="_blank"
-        onclick="trackWhatsAppConversion()"
-        class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105"
+        class="inline-block bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 rounded-full shadow-md transition-transform hover:scale-105"
       >
         Quiero sanar el amor
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="inline w-5 h-5 ml-2" />
       </a>
     </main>
 
-    <!-- WhatsApp flotante -->
+    <!-- Testimonios -->
+    <section class="mt-20 max-w-6xl w-full px-4">
+      <h2 class="text-2xl font-semibold text-pink-300 mb-10 text-center">Historias de transformación</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="relative bg-black/60 backdrop-blur-md border border-pink-400 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
+          <p class="text-base text-white italic">"Creía que no volvería a amar... pero después de sanar mi interior, el amor apareció de nuevo en mi vida, más puro que nunca."</p>
+          <span class="block mt-4 text-sm text-pink-200 font-bold text-right">– Laura Camila</span>
+        </div>
+
+        <div class="relative bg-black/60 backdrop-blur-md border border-pink-400 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
+          <p class="text-base text-white italic">"Sanar el pasado me permitió dejar de repetir patrones. Gracias a Karim y Rafaela, hoy estoy en una relación consciente."</p>
+          <span class="block mt-4 text-sm text-pink-200 font-bold text-right">– Samuel</span>
+        </div>
+
+        <div class="relative bg-black/60 backdrop-blur-md border border-pink-400 rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform">
+          <p class="text-base text-white italic">"Por primera vez entendí que el amor empieza en mí. La guía fue tan profunda que no solo sané, también florecí."</p>
+          <span class="block mt-4 text-sm text-pink-200 font-bold text-right">– Santiago</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
     <a
       href="https://wa.me/56949787103"
       target="_blank"
-      onclick="trackWhatsAppConversion()"
       class="fixed bottom-4 right-4 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110"
       aria-label="Contáctanos por WhatsApp"
     >
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="w-6 h-6 mx-auto" />
     </a>
+
+    <!-- Script de conversión para ambos botones -->
+    <script is:inline>
+      // Botón principal
+      const amorBtn = document.getElementById('whatsappBtnAmor');
+      amorBtn?.addEventListener('click', function () {
+        gtag('event', 'conversion', {
+          send_to: 'AW-17216123599/fXRBCJW0798aEM_lpJFA'
+        });
+      });
+
+      // Botón flotante
+      const floatingBtn = document.querySelector(
+        'a[href="https://wa.me/56949787103"]:not(#whatsappBtnAmor)'
+      );
+      floatingBtn?.addEventListener('click', function () {
+        gtag('event', 'conversion', {
+          send_to: 'AW-17216123599/fXRBCJW0798aEM_lpJFA'
+        });
+      });
+    </script>
   </body>
 </html>
